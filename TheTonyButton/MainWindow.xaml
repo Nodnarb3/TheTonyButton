@@ -13,20 +13,19 @@
     WindowStyle="None"
     WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Storyboard x:Key="Juggling">
+        <Storyboard x:Key="Juggling" RepeatBehavior="Forever">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="JugglingBalls">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="180"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="360"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="360"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="MoveToTop"/>
     </Window.Resources>
     <Window.Triggers>
-        <EventTrigger
-            RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard
-                Storyboard="{StaticResource MoveToTop}" />
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource Juggling}"/>
+            <BeginStoryboard Storyboard="{StaticResource MoveToTop}"/>
         </EventTrigger>
     </Window.Triggers>
     <Grid>
@@ -39,7 +38,7 @@
             HorizontalAlignment="Center" />
         <Canvas
             x:Name="JugglingBalls"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,54 +49,54 @@
             </Canvas.RenderTransform>
             <Image
                 Height="100"
-                Canvas.Left="415"
-                Canvas.Top="144"
+                Canvas.Left="-225"
+                Canvas.Top="-213"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="760"
-                Canvas.Top="144"
+                Canvas.Left="120"
+                Canvas.Top="-213"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="415"
-                Canvas.Top="468"
+                Canvas.Left="-225"
+                Canvas.Top="111"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="340"
-                Canvas.Top="306"
+                Canvas.Left="-300"
+                Canvas.Top="-51"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="835"
-                Canvas.Top="306"
+                Canvas.Left="195"
+                Canvas.Top="-51"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="760"
-                Canvas.Top="468"
+                Canvas.Left="120"
+                Canvas.Top="111"
                 Width="100"
                 Source="Assets/SlackBall.png" />
             <Image
                 Height="100"
-                Canvas.Left="587.5"
-                Canvas.Top="543"
+                Canvas.Left="-52"
+                Canvas.Top="186"
                 Width="100"
                 Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.0" />
+                RenderTransformOrigin="0.5,0.5" />
             <Image
                 Height="100"
-                Canvas.Left="587.5"
-                Canvas.Top="69"
+                Canvas.Left="-52"
+                Canvas.Top="-288"
                 Width="100"
                 Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.0" />
+                RenderTransformOrigin="0.5,0.5" />
         </Canvas>
 
     </Grid>
