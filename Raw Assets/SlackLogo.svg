@@ -15,7 +15,10 @@
    version="1.1"
    id="svg4597"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="SlackLogo.svg">
+   sodipodi:docname="SlackLogo.svg"
+   inkscape:export-filename="D:\Brandon Slack\Documents\Code\HCI 581\TheTonyButton\Raw Assets\SlackBall.png"
+   inkscape:export-xdpi="417.08502"
+   inkscape:export-ydpi="417.08502">
   <defs
      id="defs4591" />
   <sodipodi:namedview
@@ -49,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

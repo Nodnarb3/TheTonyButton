@@ -211,7 +211,7 @@
         </Storyboard>
     </Window.Resources>
     <Grid>
-        <Image
+        <Image x:Name="TonyHead"
             Height="220"
             Margin="0"
             VerticalAlignment="Center"

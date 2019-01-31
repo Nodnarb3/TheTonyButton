@@ -39,13 +39,14 @@ namespace TheTonyButton
                     }
                 };
 
+            TonyHead.MouseLeftButtonUp += (s, e) =>
+            {
+                jugglingAnimation.Stop();
+                moveToTopAnimation.Begin();
+            };
+
             KeyUp += (s, e) =>
             {
-                if (e.Key == Key.Space)
-                {
-                    jugglingAnimation.Stop();
-                    moveToTopAnimation.Begin();
-                }
 
                 if (e.Key == Key.Up)
                 {
