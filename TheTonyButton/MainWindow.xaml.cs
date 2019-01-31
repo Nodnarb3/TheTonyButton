@@ -27,6 +27,7 @@ namespace TheTonyButton
 
             Storyboard jugglingAnimation = (Storyboard)Resources["Juggling"];
             Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
+            Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
 
             jugglingAnimation.Begin();
 
@@ -41,6 +42,7 @@ namespace TheTonyButton
 
             TonyHead.MouseLeftButtonUp += (s, e) =>
             {
+                emailAnimation.Begin();
                 jugglingAnimation.Stop();
                 moveToTopAnimation.Begin();
             };
@@ -52,6 +54,7 @@ namespace TheTonyButton
                 {
                     jugglingAnimation.Begin();
                     moveToTopAnimation.Stop();
+                    emailAnimation.Stop();
                 }
             };
         }
