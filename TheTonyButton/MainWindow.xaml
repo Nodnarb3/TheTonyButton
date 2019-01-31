@@ -20,14 +20,54 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:4" Value="360"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="MoveToTop"/>
+        <Storyboard x:Key="MoveToTop">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="image7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="image5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-288"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{StaticResource Juggling}"/>
-            <BeginStoryboard Storyboard="{StaticResource MoveToTop}"/>
-        </EventTrigger>
-    </Window.Triggers>
     <Grid>
         <Image
             Height="220"
@@ -47,50 +87,50 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Canvas.RenderTransform>
-            <Image
+            <Image x:Name="image"
                 Height="100"
                 Canvas.Left="-225"
                 Canvas.Top="-213"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image1"
                 Height="100"
                 Canvas.Left="120"
                 Canvas.Top="-213"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image2"
                 Height="100"
                 Canvas.Left="-225"
                 Canvas.Top="111"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image4"
                 Height="100"
                 Canvas.Left="-300"
                 Canvas.Top="-51"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image5"
                 Height="100"
                 Canvas.Left="195"
                 Canvas.Top="-51"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image3"
                 Height="100"
                 Canvas.Left="120"
                 Canvas.Top="111"
                 Width="100"
                 Source="Assets/SlackBall.png" />
-            <Image
+            <Image x:Name="image6"
                 Height="100"
                 Canvas.Left="-52"
                 Canvas.Top="186"
                 Width="100"
                 Source="Assets/SlackBall.png"
                 RenderTransformOrigin="0.5,0.5" />
-            <Image
+            <Image x:Name="image7"
                 Height="100"
                 Canvas.Left="-52"
                 Canvas.Top="-288"

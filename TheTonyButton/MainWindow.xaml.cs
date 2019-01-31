@@ -26,9 +26,9 @@ namespace TheTonyButton
             InitializeComponent();
 
             Storyboard jugglingAnimation = (Storyboard)Resources["Juggling"];
-            //Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
+            Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
 
-            jugglingAnimation.Begin(this, true);
+            jugglingAnimation.Begin();
 
             //Keyboard handler to close the window when Escape key is pressed.
             KeyUp += (s, e) =>
@@ -39,20 +39,20 @@ namespace TheTonyButton
                     }
                 };
 
-            //KeyUp += (s, e) =>
-            //{
-            //    if (e.Key == Key.Space)
-            //    {
-            //        jugglingAnimation.Pause();
-            //        moveToTopAnimation.Begin();
-            //    }
+            KeyUp += (s, e) =>
+            {
+                if (e.Key == Key.Space)
+                {
+                    jugglingAnimation.Stop();
+                    moveToTopAnimation.Begin();
+                }
 
-            //    if (e.Key == Key.Up)
-            //    {
-            //        jugglingAnimation.Begin();
-            //        //moveToTopAnimation.Begin();
-            //    }
-            //};
+                if (e.Key == Key.Up)
+                {
+                    jugglingAnimation.Begin();
+                    moveToTopAnimation.Begin();
+                }
+            };
         }
 
 
