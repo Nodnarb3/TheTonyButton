@@ -217,7 +217,7 @@
             VerticalAlignment="Center"
             SnapsToDevicePixels="True"
             Source="Assets/TonyHead.png"
-            HorizontalAlignment="Center" />
+            HorizontalAlignment="Center" Cursor="Hand" />
         <Canvas
             x:Name="JugglingBalls"
             RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -280,6 +280,7 @@
                 Source="Assets/SlackBall.png"
                 RenderTransformOrigin="0.5,0.5" />
         </Canvas>
+        <Image x:Name="Exclamation" Height="100" Margin="0,-350,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Source="Assets/Excamation.png" Visibility="Hidden"/>
 
     </Grid>
 </Window>

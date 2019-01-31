@@ -40,7 +40,7 @@ namespace TheTonyButton
                 };
 
             TonyHead.MouseLeftButtonUp += (s, e) =>
-            {
+            { 
                 jugglingAnimation.Stop();
                 moveToTopAnimation.Begin();
             };
