@@ -99,5 +99,26 @@
   <ItemGroup>
     <Resource Include="Assets\TonyHead.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ilab-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\vr_headset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\barbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\U of C 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\outlook_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\vr_headset2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
