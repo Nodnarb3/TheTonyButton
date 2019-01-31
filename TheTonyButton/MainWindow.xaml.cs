@@ -50,7 +50,7 @@ namespace TheTonyButton
                 if (e.Key == Key.Up)
                 {
                     jugglingAnimation.Begin();
-                    moveToTopAnimation.Begin();
+                    moveToTopAnimation.Stop();
                 }
             };
         }
