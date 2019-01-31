@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -24,14 +25,32 @@ namespace TheTonyButton
         {
             InitializeComponent();
 
+            Storyboard jugglingAnimation = (Storyboard)Resources["Juggling"];
+            Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
+
+            jugglingAnimation.Begin();
+            jugglingAnimation.RepeatBehavior = RepeatBehavior.Forever;
+
             //Keyboard handler to close the window when Escape key is pressed.
             KeyUp += (s, e) =>
-            {
-                if(e.Key == Key.Escape)
                 {
-                    Close();
+                    if(e.Key == Key.Escape)
+                    {
+                        Close();
+                    }
+                };
+
+            KeyUp += (s, e) =>
+            {
+                if (e.Key == Key.Space)
+                {
+                    jugglingAnimation.Pause();
+                    moveToTopAnimation.Begin();
                 }
             };
         }
+
+
     }
+
 }
