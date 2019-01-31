@@ -13,201 +13,21 @@
     WindowStyle="None"
     WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Storyboard
-            x:Key="Juggling">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image1">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image3">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image4">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image5">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image1">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image3">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image4">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="image5">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="0" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="JugglingBalls">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:4"
-                    Value="180" />
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:8"
-                    Value="360" />
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard
-            x:Key="MoveToTop">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-176" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-316" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image1">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-152" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image1">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-80" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-72" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image2">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-48" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image3">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-48" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image3">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-44" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image4">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-148" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image4">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="4" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)"
-                Storyboard.TargetName="image5">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="136" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
-                Storyboard.TargetName="image5">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="-300" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)"
-                Storyboard.TargetName="JugglingBalls">
-                <EasingDoubleKeyFrame
-                    KeyTime="0:0:0.2"
-                    Value="0" />
+        <Storyboard x:Key="Juggling">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="JugglingBalls">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="360"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger
-            RoutedEvent="FrameworkElement.Loaded" />
+            RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard
+                Storyboard="{StaticResource MoveToTop}" />
+            <BeginStoryboard Storyboard="{StaticResource Juggling}"/>
+        </EventTrigger>
     </Window.Triggers>
     <Grid>
         <Image
@@ -219,176 +39,65 @@
             HorizontalAlignment="Center" />
         <Canvas
             x:Name="JugglingBalls"
-            Margin="300,107,300,246"
-            RenderTransformOrigin="0.494,0.727">
+            RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
                 </TransformGroup>
             </Canvas.RenderTransform>
             <Image
-                x:Name="image"
-                HorizontalAlignment="Left"
                 Height="100"
-                VerticalAlignment="Top"
+                Canvas.Left="415"
+                Canvas.Top="144"
                 Width="100"
-                Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Top="259">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+                Source="Assets/SlackBall.png" />
             <Image
-                x:Name="image1"
-                HorizontalAlignment="Left"
                 Height="100"
-                VerticalAlignment="Top"
+                Canvas.Left="760"
+                Canvas.Top="144"
                 Width="100"
-                Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Left="50"
-                Canvas.Top="101">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+                Source="Assets/SlackBall.png" />
             <Image
-                x:Name="image2"
-                HorizontalAlignment="Left"
                 Height="100"
-                VerticalAlignment="Top"
+                Canvas.Left="415"
+                Canvas.Top="468"
                 Width="100"
-                Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Left="200">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+                Source="Assets/SlackBall.png" />
             <Image
-                x:Name="image3"
                 Height="100"
-                VerticalAlignment="Top"
-                Source="Assets/SlackBall.png"
-                HorizontalAlignment="Left"
+                Canvas.Left="340"
+                Canvas.Top="306"
                 Width="100"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Left="372">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+                Source="Assets/SlackBall.png" />
             <Image
-                x:Name="image4"
                 Height="100"
-                VerticalAlignment="Top"
-                Source="Assets/SlackBall.png"
-                HorizontalAlignment="Left"
+                Canvas.Left="835"
+                Canvas.Top="306"
                 Width="100"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Left="522"
-                Canvas.Top="101">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
+                Source="Assets/SlackBall.png" />
             <Image
-                x:Name="image5"
                 Height="100"
-                VerticalAlignment="Top"
-                Source="Assets/SlackBall.png"
-                HorizontalAlignment="Left"
+                Canvas.Left="760"
+                Canvas.Top="468"
                 Width="100"
-                RenderTransformOrigin="0.5,0.5"
-                Canvas.Left="572"
-                Canvas.Top="259">
-                <Image.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.LayoutTransform>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-
+                Source="Assets/SlackBall.png" />
+            <Image
+                Height="100"
+                Canvas.Left="587.5"
+                Canvas.Top="543"
+                Width="100"
+                Source="Assets/SlackBall.png"
+                RenderTransformOrigin="0.5,0.0" />
+            <Image
+                Height="100"
+                Canvas.Left="587.5"
+                Canvas.Top="69"
+                Width="100"
+                Source="Assets/SlackBall.png"
+                RenderTransformOrigin="0.5,0.0" />
         </Canvas>
 
     </Grid>
