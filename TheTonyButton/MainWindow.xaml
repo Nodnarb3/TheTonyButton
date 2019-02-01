@@ -268,18 +268,46 @@
         <Storyboard x:Key="EmailAnimation">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="email">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="email">
                 <EasingThicknessKeyFrame KeyTime="0" Value="565,730,565,-175"/>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="565,50,565,-175"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="565,50,565,-175"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.9" Value="565,50,565,-175"/>
             </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="email">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gasp">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="gasp">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gasp">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="GaspAnimation">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gasp">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="gasp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gasp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="LaptopAnimation">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SwipingLaptop">
@@ -304,7 +332,7 @@
             VerticalAlignment="Center"
             SnapsToDevicePixels="True"
             Source="Assets/TonyHead.png"
-            HorizontalAlignment="Center" />
+            HorizontalAlignment="Center" Cursor="Hand" />
         <Canvas
             x:Name="JugglingBalls"
             RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -444,16 +472,22 @@
             Margin="565,730,565,-175"
             VerticalAlignment="Center"
             SnapsToDevicePixels="True"
-            Source="Assets/email-icon.png"
+            Source="Assets/Email.png"
             HorizontalAlignment="Center" Width="120" Visibility="Hidden" />
         <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
                  Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
-                 Width="30" Visibility="Hidden"/>
-        <Canvas x:Name="SwipingLaptop" Margin="55,361.8,442.8,341" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
-            <Rectangle x:Name="Laptop" Fill="#FF978A8A" HorizontalAlignment="Center" Height="254.4" Stroke="Black" VerticalAlignment="Center" Width="387.2" RadiusY="36" RadiusX="10"/>
-            <Image x:Name="Assets_apple_logo_PNG19680_png" Source="Assets/apple_logo_PNG19680.png" Stretch="Fill" Height="79.8" Canvas.Left="158.118" Canvas.Top="81.8" Width="70.2"/>
+                 Width="30" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Canvas x:Name="SwipingLaptop" Margin="55,361.8,442.8,341" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Hidden">
+            <Image x:Name="Laptop" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Assets/Laptop.png" Height="234" Width="387"/>
         </Canvas>
-
-
     </Grid>
 </Window>

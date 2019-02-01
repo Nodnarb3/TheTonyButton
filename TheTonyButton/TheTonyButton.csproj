@@ -100,12 +100,6 @@
     <Resource Include="Assets\TonyHead.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\email-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\apple_logo_PNG19680.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\BarbellBall.png" />
     <Resource Include="Assets\CalendarBall.png" />
     <Resource Include="Assets\FamilyBall.png" />
@@ -113,6 +107,12 @@
     <Resource Include="Assets\OutlookBall.png" />
     <Resource Include="Assets\UofCBall.png" />
     <Resource Include="Assets\VRBall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Laptop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

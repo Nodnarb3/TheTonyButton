@@ -54,13 +54,8 @@ namespace TheTonyButton
                     emailAnimation.Begin();
                 }
             };
-			
-			emailAnimation.Completed += (s, e) =>
-            {
-                gaspAnimation.Begin();
-            };
-			
-            gaspAnimation.Completed += (s, e) =>
+
+            emailAnimation.Completed += (s, e) =>
             {
 				jugglingAnimation.Stop();
                 moveToTopAnimation.Begin();
