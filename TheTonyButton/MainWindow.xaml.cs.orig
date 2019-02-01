@@ -29,9 +29,12 @@ namespace TheTonyButton
 
             Storyboard jugglingAnimation = (Storyboard)Resources["Juggling"];
             Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
+<<<<<<< HEAD
             Storyboard hover = (Storyboard)Resources["Hover"];
+=======
             Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
+>>>>>>> origin/master
 
             jugglingAnimation.Begin();
 
@@ -46,28 +49,24 @@ namespace TheTonyButton
 
             TonyHead.MouseLeftButtonUp += (s, e) =>
             {
+<<<<<<< HEAD
                 if (canClick)
                 {
                     canClick = false;
-                    TonyHead.Cursor = Cursors.Arrow;
-                    emailAnimation.Begin();
+                    jugglingAnimation.Stop();
+                    moveToTopAnimation.Begin();
                 }
-            };
-
-            emailAnimation.Completed += (s, e) =>
-            {
-                gaspAnimation.Begin();
-            };
-
-            gaspAnimation.Completed += (s, e) =>
-            {
-                jugglingAnimation.Stop();
-                moveToTopAnimation.Begin();
             };
 
             moveToTopAnimation.Completed += (s, e) =>
             {
                 hover.Begin();
+=======
+                emailAnimation.Begin();
+                jugglingAnimation.Stop();
+                moveToTopAnimation.Begin();
+                gaspAnimation.Begin();
+>>>>>>> origin/master
             };
 
             KeyUp += (s, e) =>
@@ -77,11 +76,12 @@ namespace TheTonyButton
                 {
                     jugglingAnimation.Begin();
                     moveToTopAnimation.Stop();
+<<<<<<< HEAD
+                    canClick = true;
+=======
                     emailAnimation.Stop();
                     gaspAnimation.Stop();
-                    hover.Stop();
-                    canClick = true;
-                    TonyHead.Cursor = Cursors.Hand;
+>>>>>>> origin/master
                 }
             };
         }

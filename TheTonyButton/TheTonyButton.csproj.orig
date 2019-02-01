@@ -100,9 +100,9 @@
     <Resource Include="Assets\TonyHead.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="Assets\Excamation.png" />
-  </ItemGroup>
-  <ItemGroup>
+=======
     <Resource Include="Assets\email-icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\uofc.png" />
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
