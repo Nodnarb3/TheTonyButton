@@ -21,6 +21,8 @@ namespace TheTonyButton
     /// </summary>
     public partial class MainWindow : Window
     {
+		bool canClick = true;
+		
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace TheTonyButton
             Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
             Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
+			Storyboard hover = (Storyboard)Resources["Hover"];
 
             jugglingAnimation.Begin();
 
@@ -44,16 +47,31 @@ namespace TheTonyButton
 
             TonyHead.MouseLeftButtonUp += (s, e) =>
             {
-                emailAnimation.Begin();
-                jugglingAnimation.Stop();
-                moveToTopAnimation.Begin();
+                if (canClick)
+                {
+                    canClick = false;
+                    TonyHead.Cursor = Cursors.Arrow;
+                    emailAnimation.Begin();
+                }
+            };
+			
+			emailAnimation.Completed += (s, e) =>
+            {
                 gaspAnimation.Begin();
             };
-
+			
             gaspAnimation.Completed += (s, e) =>
             {
+				jugglingAnimation.Stop();
+                moveToTopAnimation.Begin();
                 laptopAnimation.Begin();
             };
+			
+			moveToTopAnimation.Completed += (s, e) =>
+            {
+                hover.Begin();
+            };
+			
             KeyUp += (s, e) =>
             {
 
@@ -62,7 +80,11 @@ namespace TheTonyButton
                     jugglingAnimation.Begin();
                     moveToTopAnimation.Stop();
                     emailAnimation.Stop();
+                    laptopAnimation.Stop();
                     gaspAnimation.Stop();
+                    hover.Stop();
+                    canClick = true;
+                    TonyHead.Cursor = Cursors.Hand;
                 }
             };
         }
