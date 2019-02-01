@@ -29,6 +29,7 @@ namespace TheTonyButton
             Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
             Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
+            Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
 
             jugglingAnimation.Begin();
 
@@ -49,6 +50,10 @@ namespace TheTonyButton
                 gaspAnimation.Begin();
             };
 
+            gaspAnimation.Completed += (s, e) =>
+            {
+                laptopAnimation.Begin();
+            };
             KeyUp += (s, e) =>
             {
 
