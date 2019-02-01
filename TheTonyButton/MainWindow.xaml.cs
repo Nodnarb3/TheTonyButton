@@ -36,6 +36,7 @@ namespace TheTonyButton
             Storyboard emailAnimationReversed = (Storyboard)Resources["EmailAnimationReversed"];
 			Storyboard hover = (Storyboard)Resources["Hover"];
             Storyboard tapEffect = (Storyboard)Resources["TapEffects"];
+            Storyboard reverseBalls = (Storyboard)Resources["MoveDown"];
 
             jugglingAnimation.Begin();
 
@@ -81,12 +82,18 @@ namespace TheTonyButton
                 tapEffect.Begin();
             };
 
+            reverseBalls.Completed += (s, e) =>
+            {
+                jugglingAnimation.Begin();
+            };
+
             KeyUp += (s, e) =>
             {
 
                 if (e.Key == Key.Up)
                 {
-                    jugglingAnimation.Begin();
+                    reverseBalls.Begin();
+                    
                     moveToTopAnimation.Stop();
                     emailAnimation.Stop();
                     laptopAnimation.Stop();
