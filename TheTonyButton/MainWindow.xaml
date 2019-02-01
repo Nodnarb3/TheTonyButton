@@ -249,13 +249,13 @@
                 Canvas.Left="120"
                 Canvas.Top="-213"
                 Width="100"
-                Source="Assets/barbell.png" />
+                Source="Assets/gym.png" />
             <Image x:Name="image2"
                 Height="100"
                 Canvas.Left="-225"
                 Canvas.Top="111"
                 Width="100"
-                Source="Assets/U of C 2.gif" />
+                Source="Assets/uofc.png" />
             <Image x:Name="image4"
                 Height="100"
                 Canvas.Left="-300"
@@ -267,7 +267,7 @@
                 Canvas.Left="195"
                 Canvas.Top="-51"
                 Width="100"
-                Source="Assets/calendar.png" />
+                Source="Assets/calendar-icon_circle.png" />
             <Image x:Name="image3"
                 Height="100"
                 Canvas.Left="120"
@@ -279,14 +279,14 @@
                 Canvas.Left="-52"
                 Canvas.Top="186"
                 Width="100"
-                Source="Assets/outlook_icon.png"
+                Source="Assets/outlook-icon-0.png"
                 RenderTransformOrigin="0.5,0.5" />
             <Image x:Name="image7"
                 Height="100"
                 Canvas.Left="-52"
                 Canvas.Top="-288"
                 Width="100"
-                Source="Assets/vr_headset2.png"
+                Source="Assets/vr_person.png"
                 RenderTransformOrigin="0.5,0.5" />
         </Canvas>
         <Image x:Name="email"

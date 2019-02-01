@@ -123,5 +123,29 @@
   <ItemGroup>
     <Resource Include="Assets\vr_headset2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\outlook-icon-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\vr_person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\calendar-icon_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\workout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Shape 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\U of C 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\uofc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
