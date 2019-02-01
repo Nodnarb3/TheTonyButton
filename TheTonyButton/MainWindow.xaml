@@ -215,8 +215,14 @@
             </ObjectAnimationUsingKeyFrames>
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="email">
                 <EasingThicknessKeyFrame KeyTime="0" Value="565,730,565,-175"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="565,50,565,-175"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="565,50,565,-175"/>
             </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="GaspAnimation">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gasp">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Grid>
@@ -290,12 +296,16 @@
                 RenderTransformOrigin="0.5,0.5" />
         </Canvas>
         <Image x:Name="email"
-            Height="150"
+            Height="100"
             Margin="565,730,565,-175"
             VerticalAlignment="Center"
             SnapsToDevicePixels="True"
             Source="Assets/email-icon.png"
-            HorizontalAlignment="Center" Width="150" Visibility="Hidden" />
+            HorizontalAlignment="Center" Width="120" Visibility="Hidden" />
+        <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
+                 Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
+                 Width="30" Visibility="Hidden"/>
+
 
     </Grid>
 </Window>
