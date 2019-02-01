@@ -33,6 +33,7 @@ namespace TheTonyButton
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
             Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
             Storyboard laptopAnimationReversed = (Storyboard)Resources["LaptopAnimationReversed"];
+            Storyboard emailAnimationReversed = (Storyboard)Resources["EmailAnimationReversed"];
 			Storyboard hover = (Storyboard)Resources["Hover"];
 
             jugglingAnimation.Begin();
@@ -64,7 +65,9 @@ namespace TheTonyButton
             };
             laptopAnimation.Completed += (s, e) =>
             {
+                emailAnimation.Stop();
                 laptopAnimationReversed.Begin();
+                emailAnimationReversed.Begin();
             };
 			
 			moveToTopAnimation.Completed += (s, e) =>
@@ -81,6 +84,8 @@ namespace TheTonyButton
                     moveToTopAnimation.Stop();
                     emailAnimation.Stop();
                     laptopAnimation.Stop();
+                    laptopAnimationReversed.Stop();
+                    emailAnimationReversed.Stop();
                     gaspAnimation.Stop();
                     hover.Stop();
                     canClick = true;
