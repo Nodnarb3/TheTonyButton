@@ -32,6 +32,8 @@ namespace TheTonyButton
             Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
             Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
+            Storyboard laptopAnimationReversed = (Storyboard)Resources["LaptopAnimationReversed"];
+            Storyboard emailAnimationReversed = (Storyboard)Resources["EmailAnimationReversed"];
 			Storyboard hover = (Storyboard)Resources["Hover"];
             Storyboard tapEffect = (Storyboard)Resources["TapEffects"];
             Storyboard reverseBalls = (Storyboard)Resources["MoveDown"];
@@ -63,6 +65,12 @@ namespace TheTonyButton
                 moveToTopAnimation.Begin();
                 laptopAnimation.Begin();
             };
+            laptopAnimation.Completed += (s, e) =>
+            {
+                emailAnimation.Stop();
+                laptopAnimationReversed.Begin();
+                emailAnimationReversed.Begin();
+            };
 			
 			moveToTopAnimation.Completed += (s, e) =>
             {
@@ -89,6 +97,8 @@ namespace TheTonyButton
                     moveToTopAnimation.Stop();
                     emailAnimation.Stop();
                     laptopAnimation.Stop();
+                    laptopAnimationReversed.Stop();
+                    emailAnimationReversed.Stop();
                     gaspAnimation.Stop();
                     hover.Stop();
                     tapEffect.Stop();

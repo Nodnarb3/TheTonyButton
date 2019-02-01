@@ -212,6 +212,40 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.65" Value="{x:Static ScrollBarVisibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="LaptopAnimationReversed">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SwipingLaptop">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SwipingLaptop">
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="55,361.8,444,341"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1.3" Value="-1943,361.8,442.8,341"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ScrollViewer.VerticalScrollBarVisibility)" Storyboard.TargetName="SwipingLaptop">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="{x:Static ScrollBarVisibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="EmailAnimationReversed">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="email">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="email">
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="565,50,565,-496"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1.1" Value="565,50,565,-496"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1.3" Value="565,50,565,-496"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1.5" Value="565,730,565,-175"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="email">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SwipingLaptop">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            </Storyboard>
         <Storyboard x:Key="TapEffects" RepeatBehavior="Forever">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Tap1">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
@@ -523,13 +557,6 @@
                 </Image.RenderTransform>
             </Image>
         </Canvas>
-        <Image x:Name="email"
-            Height="100"
-            Margin="565,730,565,-175"
-            VerticalAlignment="Center"
-            SnapsToDevicePixels="True"
-            Source="Assets/Email.png"
-            HorizontalAlignment="Center" Width="120" Visibility="Hidden" />
         <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
                  Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
                  Width="30" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
@@ -545,6 +572,13 @@
         <Canvas x:Name="SwipingLaptop" Margin="55,361.8,442.8,341" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Hidden">
             <Image x:Name="Laptop" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Assets/Laptop.png" Height="234" Width="387"/>
         </Canvas>
+        <Image x:Name="email"
+            Height="100"
+            Margin="565,730,565,-175"
+            VerticalAlignment="Center"
+            SnapsToDevicePixels="True"
+            Source="Assets/Email.png"
+            HorizontalAlignment="Center" Width="120" Visibility="Hidden" />
         <Canvas x:Name="TapTap" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="Tap1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="*tap*" VerticalAlignment="Top" FontSize="48" FontFamily="Arial Rounded MT Bold" Canvas.Left="-389" Canvas.Top="194" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
