@@ -23,10 +23,13 @@ namespace TheTonyButton
     {
         public MainWindow()
         {
+            bool canClick = true;
+
             InitializeComponent();
 
             Storyboard jugglingAnimation = (Storyboard)Resources["Juggling"];
             Storyboard moveToTopAnimation = (Storyboard)Resources["MoveToTop"];
+            Storyboard hover = (Storyboard)Resources["Hover"];
 
             jugglingAnimation.Begin();
 
@@ -40,9 +43,18 @@ namespace TheTonyButton
                 };
 
             TonyHead.MouseLeftButtonUp += (s, e) =>
-            { 
-                jugglingAnimation.Stop();
-                moveToTopAnimation.Begin();
+            {
+                if (canClick)
+                {
+                    canClick = false;
+                    jugglingAnimation.Stop();
+                    moveToTopAnimation.Begin();
+                }
+            };
+
+            moveToTopAnimation.Completed += (s, e) =>
+            {
+                hover.Begin();
             };
 
             KeyUp += (s, e) =>
@@ -52,6 +64,7 @@ namespace TheTonyButton
                 {
                     jugglingAnimation.Begin();
                     moveToTopAnimation.Stop();
+                    canClick = true;
                 }
             };
         }

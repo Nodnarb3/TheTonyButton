@@ -209,6 +209,56 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="30"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="Hover" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Grid>
         <Image x:Name="TonyHead"
@@ -217,7 +267,11 @@
             VerticalAlignment="Center"
             SnapsToDevicePixels="True"
             Source="Assets/TonyHead.png"
-            HorizontalAlignment="Center" Cursor="Hand" />
+            HorizontalAlignment="Center" Cursor="Hand" >
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="0"/>
+            </Image.Effect>
+        </Image>
         <Canvas
             x:Name="JugglingBalls"
             RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -234,51 +288,123 @@
                 Canvas.Left="-225"
                 Canvas.Top="-213"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image1"
                 Height="100"
                 Canvas.Left="120"
                 Canvas.Top="-213"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image2"
                 Height="100"
                 Canvas.Left="-225"
                 Canvas.Top="111"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image4"
                 Height="100"
                 Canvas.Left="-300"
                 Canvas.Top="-51"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image5"
                 Height="100"
                 Canvas.Left="195"
                 Canvas.Top="-51"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image3"
                 Height="100"
                 Canvas.Left="120"
                 Canvas.Top="111"
                 Width="100"
-                Source="Assets/SlackBall.png" />
+                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image6"
                 Height="100"
                 Canvas.Left="-52"
                 Canvas.Top="186"
                 Width="100"
                 Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.5" />
+                RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
             <Image x:Name="image7"
                 Height="100"
                 Canvas.Left="-52"
                 Canvas.Top="-288"
                 Width="100"
                 Source="Assets/SlackBall.png"
-                RenderTransformOrigin="0.5,0.5" />
+                RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
         </Canvas>
         <Image x:Name="Exclamation" Height="100" Margin="0,-350,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Source="Assets/Excamation.png" Visibility="Hidden"/>
 
