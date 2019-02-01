@@ -103,52 +103,16 @@
     <Resource Include="Assets\email-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\ilab-logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\vr_headset.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\barbell.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\calendar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\U of C 2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\outlook_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\vr_headset2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\outlook-icon-0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\vr_person.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\calendar-icon_circle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\workout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\gym.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Shape 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\U of C 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\uofc.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\apple_logo_PNG19680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\BarbellBall.png" />
+    <Resource Include="Assets\CalendarBall.png" />
+    <Resource Include="Assets\FamilyBall.png" />
+    <Resource Include="Assets\ILabBall.png" />
+    <Resource Include="Assets\OutlookBall.png" />
+    <Resource Include="Assets\UofCBall.png" />
+    <Resource Include="Assets\VRBall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

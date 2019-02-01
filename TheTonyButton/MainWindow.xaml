@@ -321,7 +321,7 @@
                 Canvas.Left="-225"
                 Canvas.Top="-213"
                 Width="100"
-                Source="Assets/ilab-logo.png" RenderTransformOrigin="0.5,0.5" >
+                Source="Assets/ILabBall.png" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -336,7 +336,7 @@
                 Canvas.Left="120"
                 Canvas.Top="-213"
                 Width="100"
-                Source="Assets/gym.png" RenderTransformOrigin="0.5,0.5" >
+                Source="Assets/BarbellBall.png" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -351,7 +351,7 @@
                 Canvas.Left="-225"
                 Canvas.Top="111"
                 Width="100"
-                Source="Assets/uofc.png" RenderTransformOrigin="0.5,0.5" >
+                Source="Assets/UofCBall.png" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -381,7 +381,7 @@
                 Canvas.Left="195"
                 Canvas.Top="-51"
                 Width="100"
-                Source="Assets/calendar-icon_circle.png" RenderTransformOrigin="0.5,0.5" >
+                Source="Assets/CalendarBall.png" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -396,7 +396,7 @@
                 Canvas.Left="120"
                 Canvas.Top="111"
                 Width="100"
-                Source="Assets/SlackBall.png" RenderTransformOrigin="0.5,0.5" >
+                Source="Assets/FamilyBall.png" RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -411,7 +411,7 @@
                 Canvas.Left="-52"
                 Canvas.Top="186"
                 Width="100"
-                Source="Assets/outlook-icon-0.png"
+                Source="Assets/OutlookBall.png"
                 RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -427,7 +427,7 @@
                 Canvas.Left="-52"
                 Canvas.Top="-288"
                 Width="100"
-                Source="Assets/vr_person.png"
+                Source="Assets/VRBall.png"
                 RenderTransformOrigin="0.5,0.5" >
                 <Image.RenderTransform>
                     <TransformGroup>
