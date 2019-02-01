@@ -305,6 +305,12 @@
         <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
                  Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
                  Width="30" Visibility="Hidden"/>
+        <Canvas x:Name="SwipingLaptop" Margin="443.6,361.8,442.8,97.4" Visibility="Hidden">
+            <Rectangle x:Name="Laptop" Fill="#FF978A8A" HorizontalAlignment="Left" Height="254.4" Stroke="Black" VerticalAlignment="Top" Width="387.2" RadiusY="36" RadiusX="10"/>
+            <Image x:Name="Assets_apple_logo_PNG19680_png" Source="Assets/apple_logo_PNG19680.png" Stretch="Fill" Height="79.8" Canvas.Left="158.118" Canvas.Top="81.8" Width="70.2"/>
+
+
+        </Canvas>
 
 
     </Grid>
