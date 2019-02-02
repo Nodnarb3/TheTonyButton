@@ -411,31 +411,38 @@
                 <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="-52" KeySpline="0,0,1,0.34"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="ThumbsUp">
+        <Storyboard x:Key="ThumbsUp" AutoReverse="True">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Thumb">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image9">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="210"/>
+            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image8">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="121"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="121.583"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="123.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="216"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="216"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="216"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image8">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-3.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-19.417"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-28.667"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image9">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="124.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image9">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="3.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-16"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image8">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="81.308"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="12.529"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21.038"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="8.531"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-17.65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-17.65"/>
             </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="Thumb">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0"/>
+            </ThicknessAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Grid>
@@ -448,7 +455,7 @@
             HorizontalAlignment="Center" Cursor="Hand" />
         <Canvas
             x:Name="JugglingBalls"
-            RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsHidden="True">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -592,7 +599,7 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Canvas x:Name="Thumb" HorizontalAlignment="Right" Height="101.25" Margin="0,0,463.632,256.25" VerticalAlignment="Bottom" Width="173.868" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+        <Canvas x:Name="Thumb" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Visibility="Hidden" >
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -601,7 +608,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Canvas.RenderTransform>
-            <Image x:Name="image9" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/thumbsdown.png" RenderTransformOrigin="-0.375,0.505">
+            <Image x:Name="image9" HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Source="Assets/thumbsdown.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="-54" Canvas.Top="17">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -611,7 +618,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image x:Name="image8" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/thumb_tip.png" RenderTransformOrigin="0.5,0.5" Canvas.Top="0.5" Canvas.Left="5">
+            <Image x:Name="image8" Height="100" Width="100" Source="Assets/thumb_tip.png" RenderTransformOrigin="0.5,0.5" Canvas.Top="1" Canvas.Left="-55" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
