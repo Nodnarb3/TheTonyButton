@@ -114,5 +114,8 @@
   <ItemGroup>
     <Resource Include="Assets\Laptop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ilab-background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
