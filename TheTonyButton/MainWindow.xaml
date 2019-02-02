@@ -645,6 +645,9 @@
                 </TransformGroup>
             </Canvas.RenderTransform>
             <Image x:Name="image9" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/thumbsdown.png" RenderTransformOrigin="-0.375,0.505">
+                <Image.Effect>
+                    <DropShadowEffect BlurRadius="1" Direction="270" ShadowDepth="1.5"/>
+                </Image.Effect>
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
