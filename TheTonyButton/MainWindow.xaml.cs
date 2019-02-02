@@ -65,11 +65,10 @@ namespace TheTonyButton
                 moveToTopAnimation.Begin();
                 laptopAnimation.Begin();
             };
+
             laptopAnimation.Completed += (s, e) =>
             {
                 emailAnimation.Stop();
-                laptopAnimationReversed.Begin();
-                emailAnimationReversed.Begin();
             };
 			
 			moveToTopAnimation.Completed += (s, e) =>
@@ -82,9 +81,27 @@ namespace TheTonyButton
                 tapEffect.Begin();
             };
 
+            tapEffect.Completed += (s, e) =>
+            {
+                emailAnimationReversed.Begin();
+            };
+
+            emailAnimationReversed.Completed += (s, e) =>
+            {
+                laptopAnimationReversed.Begin();
+            };
+
+            laptopAnimationReversed.Completed += (s, e) =>
+            {
+                reverseBalls.Begin();
+                hover.Stop();
+            };
+
             reverseBalls.Completed += (s, e) =>
             {
                 jugglingAnimation.Begin();
+                canClick = true;
+                TonyHead.Cursor = Cursors.Hand;
             };
 
             KeyUp += (s, e) =>
