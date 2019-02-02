@@ -33,6 +33,7 @@ namespace TheTonyButton
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
             Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
 			Storyboard hover = (Storyboard)Resources["Hover"];
+            Storyboard thumbsUp = (Storyboard)Resources["ThumbsUp"];
 
             jugglingAnimation.Begin();
 
@@ -61,7 +62,12 @@ namespace TheTonyButton
                 moveToTopAnimation.Begin();
                 laptopAnimation.Begin();
             };
-			
+
+            laptopAnimation.Completed += (s, e) =>
+            {
+                thumbsUp.Begin();
+            };
+
 			moveToTopAnimation.Completed += (s, e) =>
             {
                 hover.Begin();
@@ -78,6 +84,7 @@ namespace TheTonyButton
                     laptopAnimation.Stop();
                     gaspAnimation.Stop();
                     hover.Stop();
+                    thumbsUp.Stop();
                     canClick = true;
                     TonyHead.Cursor = Cursors.Hand;
                 }

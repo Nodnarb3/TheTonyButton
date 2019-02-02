@@ -324,6 +324,32 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.65" Value="{x:Static ScrollBarVisibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="ThumbsUp">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Thumb">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="121"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="121.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="123.083"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-3.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-19.417"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-28.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image9">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="124.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image9">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="3.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="81.308"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="12.529"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21.038"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Grid>
         <Image x:Name="TonyHead"
@@ -486,6 +512,36 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
+        <Canvas x:Name="Thumb" HorizontalAlignment="Right" Height="101.25" Margin="0,0,463.632,256.25" VerticalAlignment="Bottom" Width="173.868" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Image x:Name="image9" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/thumbsdown.png" RenderTransformOrigin="-0.375,0.505">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="image8" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/thumb_tip.png" RenderTransformOrigin="0.5,0.5" Canvas.Top="0.5" Canvas.Left="5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="81.308"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
         <Canvas x:Name="SwipingLaptop" Margin="55,361.8,442.8,341" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Hidden">
             <Image x:Name="Laptop" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Assets/Laptop.png" Height="234" Width="387"/>
         </Canvas>
