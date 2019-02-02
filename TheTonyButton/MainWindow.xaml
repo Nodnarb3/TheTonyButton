@@ -172,12 +172,25 @@
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gasp">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.167" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="gasp">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.167" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.3"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gasp">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.167" Value="0"/>
+                <EasingDoubleKeyFrame x:Name="easingDoubleKeyFrame" KeyTime="0:0:1.2" Value="14"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="GaspAnimation">
@@ -200,29 +213,29 @@
         <Storyboard x:Key="LaptopAnimation">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SwipingLaptop">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.25" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SwipingLaptop">
                 <EasingThicknessKeyFrame KeyTime="0" Value="53,361.8,442.8,341"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.25" Value="-1619,361.8,442.8,341"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="55,361.8,444,341"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="-1619,361.8,442.8,341"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="55,361.8,444,341"/>
             </ThicknessAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ScrollViewer.VerticalScrollBarVisibility)" Storyboard.TargetName="SwipingLaptop">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static ScrollBarVisibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.25" Value="{x:Static ScrollBarVisibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static ScrollBarVisibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="LaptopAnimationReversed">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SwipingLaptop">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SwipingLaptop">
                 <EasingThicknessKeyFrame KeyTime="0" Value="55,361.8,444,341"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="-1943,361.8,442.8,341"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="-1943,361.8,442.8,341"/>
             </ThicknessAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ScrollViewer.VerticalScrollBarVisibility)" Storyboard.TargetName="SwipingLaptop">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static ScrollBarVisibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static ScrollBarVisibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="EmailAnimationReversed">
@@ -420,6 +433,18 @@
             SnapsToDevicePixels="True"
             Source="Assets/TonyHead.png"
             HorizontalAlignment="Center" Cursor="Hand" />
+        <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
+                 Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
+                 Width="30" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
         <Canvas
             x:Name="JugglingBalls"
             RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -554,18 +579,18 @@
                 </Image.RenderTransform>
             </Image>
         </Canvas>
-        <Ellipse x:Name="gasp" Fill="Black" HorizontalAlignment="Center" Height="40" 
-                 Margin="0,90,0,0" Stroke="Black" VerticalAlignment="Center"
-                 Width="30" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
-            <Ellipse.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Ellipse.RenderTransform>
-        </Ellipse>
+        <Canvas x:Name="GaspText" Visibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="textBlock" Text="*gasp*" FontFamily="Arial Rounded MT Bold" FontSize="20" Canvas.Left="49" Canvas.Top="19" RenderTransformOrigin="0.5,0.5" Opacity="0">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-16.533"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Canvas>
         <Canvas x:Name="SwipingLaptop" Margin="55,361.8,442.8,341" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Hidden">
             <Image x:Name="Laptop" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Assets/Laptop.png" Height="234" Width="387"/>
         </Canvas>
