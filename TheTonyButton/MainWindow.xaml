@@ -11,7 +11,7 @@
     Width="1280"
     WindowState="Maximized"
     WindowStyle="None"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen" Background="White">
     <Window.Resources>
         <Storyboard x:Key="Juggling" RepeatBehavior="Forever">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="JugglingBalls">
@@ -416,6 +416,10 @@
         </Storyboard>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/ilab-background.png" Opacity="0.75"/>
+        </Grid.Background>
+
         <Image x:Name="TonyHead"
             Height="220"
             Margin="0"
