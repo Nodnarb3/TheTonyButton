@@ -32,8 +32,12 @@ namespace TheTonyButton
             Storyboard emailAnimation = (Storyboard)Resources["EmailAnimation"];
             Storyboard gaspAnimation = (Storyboard)Resources["GaspAnimation"];
             Storyboard laptopAnimation = (Storyboard)Resources["LaptopAnimation"];
+            Storyboard laptopAnimationReversed = (Storyboard)Resources["LaptopAnimationReversed"];
+            Storyboard emailAnimationReversed = (Storyboard)Resources["EmailAnimationReversed"];
 			Storyboard hover = (Storyboard)Resources["Hover"];
             Storyboard thumbsUp = (Storyboard)Resources["ThumbsUp"];
+            Storyboard tapEffect = (Storyboard)Resources["TapEffects"];
+            Storyboard reverseBalls = (Storyboard)Resources["MoveDown"];
 
             jugglingAnimation.Begin();
 
@@ -66,25 +70,59 @@ namespace TheTonyButton
             laptopAnimation.Completed += (s, e) =>
             {
                 thumbsUp.Begin();
-            };
 
+                emailAnimation.Stop();
+            };
+			
 			moveToTopAnimation.Completed += (s, e) =>
             {
                 hover.Begin();
             };
-			
+
+            laptopAnimation.Completed += (s, e) =>
+            {
+                tapEffect.Begin();
+            };
+
+            tapEffect.Completed += (s, e) =>
+            {
+                emailAnimationReversed.Begin();
+            };
+
+            emailAnimationReversed.Completed += (s, e) =>
+            {
+                laptopAnimationReversed.Begin();
+            };
+
+            laptopAnimationReversed.Completed += (s, e) =>
+            {
+                reverseBalls.Begin();
+                hover.Stop();
+            };
+
+            reverseBalls.Completed += (s, e) =>
+            {
+                jugglingAnimation.Begin();
+                canClick = true;
+                TonyHead.Cursor = Cursors.Hand;
+            };
+
             KeyUp += (s, e) =>
             {
 
                 if (e.Key == Key.Up)
                 {
-                    jugglingAnimation.Begin();
+                    reverseBalls.Begin();
+                    
                     moveToTopAnimation.Stop();
                     emailAnimation.Stop();
                     laptopAnimation.Stop();
+                    laptopAnimationReversed.Stop();
+                    emailAnimationReversed.Stop();
                     gaspAnimation.Stop();
                     hover.Stop();
                     thumbsUp.Stop();
+                    tapEffect.Stop();
                     canClick = true;
                     TonyHead.Cursor = Cursors.Hand;
                 }
