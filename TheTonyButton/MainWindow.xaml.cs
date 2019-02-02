@@ -69,9 +69,8 @@ namespace TheTonyButton
 
             laptopAnimation.Completed += (s, e) =>
             {
-                thumbsUp.Begin();
-
                 emailAnimation.Stop();
+                tapEffect.Begin();
             };
 			
 			moveToTopAnimation.Completed += (s, e) =>
@@ -79,12 +78,12 @@ namespace TheTonyButton
                 hover.Begin();
             };
 
-            laptopAnimation.Completed += (s, e) =>
+            tapEffect.Completed += (s, e) =>
             {
-                tapEffect.Begin();
+                thumbsUp.Begin();
             };
 
-            tapEffect.Completed += (s, e) =>
+            thumbsUp.Completed += (s, e) =>
             {
                 emailAnimationReversed.Begin();
             };
